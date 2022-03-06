@@ -1,11 +1,4 @@
-import {
-  GET_ALBUMS,
-  GET_ALBUMS_FAILED,
-  GET_PHOTOS,
-  GET_PHOTOS_FAILED,
-  GET_ALBUMS_LOADING,
-  GET_PHOTOS_LOADING,
-} from "../actions/action.js";
+import { GET_ALBUMS } from "../actions/action.js";
 const INITIAL_STATE = {
   Albums: [],
 };

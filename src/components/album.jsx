@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Text, Image, VStack, Link, Box } from "@chakra-ui/react";
+import { Flex, Text, Image, VStack, Link } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { FiDollarSign } from "react-icons/fi";
 export default function Album({ data, idx, photosData }) {
@@ -11,7 +11,7 @@ export default function Album({ data, idx, photosData }) {
       </Text>
       <VStack direction={"column"} spacing={4} pt="1rem" w="full" align="start">
         {photosData?.map((item, idx) => {
-          return idx <= 9 && <PhotoDataCard data={item} />;
+          return idx <= 9 && <PhotoDataCard data={item} key={item.id} />;
         })}
       </VStack>
     </Flex>

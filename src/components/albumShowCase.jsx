@@ -6,7 +6,6 @@ import {
   InputGroup,
   VStack,
 } from "@chakra-ui/react";
-import HomeLayout from "../routes/home";
 import { FiChevronRight } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAlbums, fetchPhotos } from "../redux/actions/fetchActions";
