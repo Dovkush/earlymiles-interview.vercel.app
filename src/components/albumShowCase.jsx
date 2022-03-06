@@ -16,7 +16,6 @@ export default function AlbumShowCase() {
   const [input, setInput] = useState("");
   const data = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log(data);
   const filterPhotosData = (id) => {
     const filtered = data?.photosData?.Photos[0]?.filter((item) => {
       return item.albumId === id && item.title.includes(input);

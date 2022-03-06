@@ -15,8 +15,6 @@ export const fetchAlbums = () => {
 
 export const fetchPhotos = () => {
   return (dispatch) => {
-    console.log("hello");
-
     axios
       .get("/photos")
       .then((res) => {

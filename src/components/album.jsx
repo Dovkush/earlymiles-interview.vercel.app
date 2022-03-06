@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 import { FiDollarSign } from "react-icons/fi";
 export default function Album({ data, idx, photosData }) {
   const photos = useSelector((state) => state?.photosData?.Photos[0]);
-  const FilterData = () => {};
-  console.log(photosData);
   return photosData && photosData.length > 0 ? (
     <Flex direction={"column"} w="full">
       <Text variant="h1" as="h1" fontSize={"1.2rem"}>
@@ -46,7 +44,13 @@ const PhotoDataCard = ({ data }) => {
           >
             {data.title}
           </Text>
-          <Link href={data.url}>
+          <Link
+            href={data.url}
+            isExternal={true}
+            _active={{ borderColor: "white", textDecoration: "underline" }}
+            _focus={{ borderColor: "white", textDecoration: "underline" }}
+            _hover={{ borderColor: "white", textDecoration: "underline" }}
+          >
             <Text
               color="#91919F"
               fontSize={"0.8rem"}
