@@ -1,9 +1,4 @@
-import {
-  GET_ALBUMS,
-  GET_PHOTOS,
-  GET_ALBUMS_FAILED,
-  GET_PHOTOS_FAILED,
-} from "./action";
+import { GET_ALBUMS, GET_PHOTOS } from "./action";
 import { axiosInstance as axios } from "../../axiosInstance";
 export const fetchAlbums = () => {
   return (dispatch) => {
@@ -13,7 +8,7 @@ export const fetchAlbums = () => {
         dispatch({ type: GET_ALBUMS, albums: res.data });
       })
       .catch((err) => {
-        dispatch({ type: GET_ALBUMS_FAILED, albums: [] });
+        console.log(err);
       });
   };
 };
@@ -28,7 +23,7 @@ export const fetchPhotos = () => {
         dispatch({ type: GET_PHOTOS, photos: res.data });
       })
       .catch((err) => {
-        dispatch({ type: GET_PHOTOS_FAILED, photos: [] });
+        console.log(err);
       });
   };
 };
