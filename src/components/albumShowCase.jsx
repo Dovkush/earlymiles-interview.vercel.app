@@ -34,7 +34,7 @@ export default function AlbumShowCase() {
       borderColor={"red"}
       p="1rem"
       direction={"column"}
-      maxWidth="70rem"
+      maxWidth="1280px"
     >
       <FlushedInput input={input} setInput={setInput} />
       <VStack spacing={6} w="full" align="start" pt="1rem" pb="1rem">
